@@ -7,5 +7,4 @@ public class Photo extends PhotoTreeComponent {
     public void print(){
         System.out.println("photo " + super.getName());
     }
-
 }

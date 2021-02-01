@@ -44,24 +44,5 @@ public class PhotoCompositorApp {
         root.print();
     }
 
-//            if (! (root.getChild(0) instanceof Photo) ) {
-//
-//                System.out.print(root.getChild(0).getName()); // België
-//            }
-//            else System.out.print(root.getChild(0) );
-
-//        int i = 0;
-//        do {
-//            int j = 0;
-//            do  {
-//                root.getChild(i).getChild(j).print();
-//                j++;
-//            } while (root.getChild(i).getChild(j).toString().trim().length()>0);
-//            i++;
-//        } while (root.getChild(i).toString().trim().length()>0);
-//
-//
-//        }
-
-    }
+}
 

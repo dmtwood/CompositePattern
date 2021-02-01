@@ -29,13 +29,9 @@ public class Location extends PhotoTreeComponent {
     }
     public void print(){
         for (PhotoTreeComponent child : children){
-            if (child instanceof Photo) {
-                System.out.println(child.getName());
-            }
+            System.out.println( child.getName() );
             if (child instanceof Location) {
-                Location location = (Location) child;
-                System.out.println(location.getName());
-                location.print();
+                child.print();
             }
         }
     }

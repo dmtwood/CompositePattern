@@ -2,21 +2,20 @@ package com.dimidev.compositepattern.menu;
 
 public class MenuApp {
     public static void main(String args[]) {
-        MenuComponent pancakeHouseMenu =
-                new Menu("PANCAKE HOUSE MENU", "Breakfast");
-        MenuComponent dinerMenu =
-                new Menu("DINER MENU", "Lunch");
-        MenuComponent cafeMenu =
-                new Menu("CAFE MENU", "Dinner");
-        MenuComponent dessertMenu =
-                new Menu("DESSERT MENU", "Dessert of course!");
-        MenuComponent coffeeMenu = new Menu("COFFEE MENU", "Stuff to go with your afternoon coffee");
-
         MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined");
+
+        MenuComponent pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
+        MenuComponent dinerMenu = new Menu("DINER MENU", "Lunch");
+        MenuComponent cafeMenu = new Menu("CAFE MENU", "Dinner");
+        MenuComponent dessertMenu = new Menu("DESSERT MENU", "Dessert of course!");
+        MenuComponent coffeeMenu = new Menu("COFFEE MENU", "Stuff to go with your afternoon coffee");
 
         allMenus.add(pancakeHouseMenu);
         allMenus.add(dinerMenu);
         allMenus.add(cafeMenu);
+        dinerMenu.add(dessertMenu);
+        cafeMenu.add(coffeeMenu);
+
 
         pancakeHouseMenu.add(new MenuItem(
                 "K&B's Pancake Breakfast",
@@ -38,6 +37,7 @@ public class MenuApp {
                 "Waffles, with your choice of blueberries or strawberries",
                 true,
                 3.59));
+
 
         dinerMenu.add(new MenuItem(
                 "Vegetarian BLT",
@@ -71,7 +71,6 @@ public class MenuApp {
                 true,
                 3.89));
 
-        dinerMenu.add(dessertMenu);
 
         dessertMenu.add(new MenuItem(
                 "Apple Pie",
@@ -90,6 +89,7 @@ public class MenuApp {
                 true,
                 1.89));
 
+
         cafeMenu.add(new MenuItem(
                 "Veggie Burger and Air Fries",
                 "Veggie burger on a whole wheat bun, lettuce, tomato, and fries",
@@ -106,7 +106,6 @@ public class MenuApp {
                 true,
                 4.29));
 
-        cafeMenu.add(coffeeMenu);
 
         coffeeMenu.add(new MenuItem(
                 "Coffee Cake",
@@ -123,6 +122,8 @@ public class MenuApp {
                 "Three almond or hazelnut biscotti cookies",
                 true,
                 0.89));
+
+
         allMenus.print();
 
 
